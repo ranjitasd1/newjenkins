@@ -33,5 +33,14 @@ pipeline{
                 '''
             }
          }
+         stage('disk information'){
+            steps{
+                sh '''
+                echo "the info"
+                lsblk
+                '''
+            }
+         }
+         
     }
 }

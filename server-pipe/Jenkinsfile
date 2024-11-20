@@ -25,12 +25,13 @@ pipeline{
                 '''
             }
         }
-        stage('date detail')
-        steps{
-            sh '''
-            echo "the date today"
-            date
-        }
-
+        stage('current details'){
+            steps{
+                sh '''
+                echo "recognize details"
+                date
+                '''
+            }
+         }
     }
 }

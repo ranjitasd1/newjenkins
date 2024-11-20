@@ -1,0 +1,36 @@
+pipeline{
+    agent any
+    stages{
+        stage('syatem detail'){
+            steps{
+                sh '''
+                echo "the total system is "
+                uname -a
+                '''
+            }
+        }
+        stage('memory'){
+            steps{
+                sh '''
+                echo "the total storage"
+                free -h
+                '''
+            }
+        }
+        stage('cpu'){
+            steps{
+                sh '''
+                echo "the total storage"
+                lscpu
+                '''
+            }
+        }
+        stage('date detail')
+        steps{
+            sh '''
+            echo "the date today"
+            date
+        }
+
+    }
+}
